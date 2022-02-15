@@ -1,30 +1,32 @@
 // Colors
 //
-$theme: #018574;
-$text: #e8eef2;
-$light-grey: #494f5c;
-$dark-grey: #3B3E48;
-$highlight-grey: #7d828a;
-$midnightblue: #2c3e50;
+$theme: #6272a4;
+$text: #f8f8f2;
+$light-grey: #282a36;
+$dark-grey: #44475a;
+$highlight-grey: $theme;
+$midnightblue: $dark-grey;
 
 // Fonts
 //
-$fonts: "Trebuchet MS", Verdana, "Verdana Ref", "Segoe UI", Candara, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-$code-fonts: Consolas, "Andale Mono WT", "Andale Mono", Menlo, Monaco, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, "YaHei Consolas Hybrid", monospace, "Segoe UI Emoji", "PingFang SC", "Microsoft YaHei";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$fonts: "Roboto", "Arial", sans-serif;
+$code-fonts: "Fira Code", "Consolas", monospace, sans-serif;
 
 // Mixins
 //
 @mixin dimmed {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 @mixin aTag {
   a {
     word-wrap: break-word;
     border: none;
-    box-shadow: inset 0 -4px 0 $theme;
+    box-shadow: inset 0 -2px 0 $theme;
     transition-property: box-shadow;
-    transition-duration: .1s;
+    transition-duration: 0.1s;
 
     &:hover {
       box-shadow: inset 0 -1em 0 $theme;

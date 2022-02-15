@@ -97,6 +97,10 @@ a {
     color: #fff;
     text-shadow: 0 0 1px #fff;
   }
+
+  &:hover svg {
+    filter: drop-shadow(0 0 0.5px #fff);
+  }
 }
 
 hr {
@@ -173,15 +177,15 @@ table {
     padding: 1px;
     font-size: 0.7em;
     line-height: 1.8;
-    color: #fff;
-    background-color: #777;
+    color: $text;
+    background-color: $theme;
     opacity: 0.6;
     min-width: 55px;
     text-align: center;
 }
 
 .highlight-copy-btn:hover {
-    background-color: #666;
+  opacity: 0.8;
 }
 
 // Accessibility
@@ -620,17 +624,19 @@ hr.post-end {
 .footnotes {
   font-size: .85em;
 
-  a {
+  a:hover {
+    background: transparent;
+  }
+
+  a.footnote-backref {
     box-shadow: none;
-    text-decoration: underline;
-    transition-property: color;
+    padding: 2px;
+    border-radius: 2px;
 
     &:hover {
-      background: transparent;
-    }
-
-    &.footnote-backref {
-      text-decoration: none;
+      box-shadow: none;
+      background-color: $theme;
+      transition-property: background-color;
     }
   }
 
@@ -644,7 +650,6 @@ a.footnote-ref {
   text-decoration: none;
   padding: 2px;
   border-radius: 2px;
-  background-color: $midnightblue;
 
   &:hover{
     box-shadow: none;
